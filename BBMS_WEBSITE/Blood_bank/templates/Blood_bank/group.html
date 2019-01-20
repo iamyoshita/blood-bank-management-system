@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<title>donor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+    <style>
+    body{
+         background-color:#CCFFFF
+        }
+    </style>
+</head>
+<body>
+<div class="w3-container">
+  <h2>DONORS</h2>
+  <p>HERE IS A LIST OF ALL THE DONORS</p>
+    {% for album in all_records %}
+  <div class="w3-card-2" style="width:60%">
+    <img src="https://www.w3schools.com/w3css/img_avatar3.png" alt={{album.id}} style="width:10%">
+    <div class="w3-container">
+      <h4><b>{{album.name}}</b></h4>
+      <p>{{album.blood_group}}</p>
+    </div>
+  </div>
+  <br>
+{% endfor %}
+</body>
+</html>
